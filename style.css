@@ -1,0 +1,18 @@
+body{
+    background: linear-gradient(#8c49b8 0%, #e67bad 100%);
+    align-content: center;
+}
+#start{
+    background-color: rgba(255,255,255,0.6);
+    height: 15%;
+    margin-left:42%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    margin-top: 10px;
+    width: 15%;
+    border-width: none;
+    border-radius: 30px;
+    font-size: cover;
+    font-family: cursive;
+    font-size: 25px;
+}

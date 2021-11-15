@@ -1,0 +1,40 @@
+<html>
+  <head>
+  <script src='https://meet.jit.si/external_api.js'></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://i.pinimg.com/originals/0b/a2/d4/0ba2d4b0c24d896fb45f9581c5e660a6.png">
+</head>
+<body>
+
+<button id="start" type="button">Start</button>
+<div id="container">
+</div>
+
+<script>
+var button = document.querySelector('#start');
+var container = document.querySelector('#container');
+var api = null;
+
+button.addEventListener('click', () => {
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var stringLength = 30;
+
+    function pickRandom() {
+    return possible[Math.floor(Math.random() * possible.length)];
+    }
+
+var randomString = Array.apply(null, Array(stringLength)).map(pickRandom).join('');
+
+    var domain = "meet.jit.si";
+    var options = {
+        "roomName": randomString,
+        "parentNode": container,
+        "width": "100%",
+        "height": "100%",
+    };
+    api = new JitsiMeetExternalAPI(domain, options);
+});
+
+</script>
+</body>
+</html>
